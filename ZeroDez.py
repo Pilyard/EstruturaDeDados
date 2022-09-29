@@ -1,13 +1,14 @@
 while True:
     try:
-        x = float(input("Digite um número entre 0 e 10 que desejar: "))
-        if 0 <= x <= 10:
-            print("Parabéns, você acertou!")
+        print("Precisa ser entre 0 e 10!")
+        numero = int(input("Digite um número: "))
+
+        if numero >= 0 and numero <= 10:
+            print("Parabéns!")
             break
-        else:
-            print(f"Tente novamente! {x:.0f} não é correspondente.")
+
     except ValueError:
-        print("Os dados que você digitou está inválido, tente novamente!")
+        print("Esse número não é válido!")
     except KeyboardInterrupt:
-        print("\nO programa foi interrompido!")
+        print("O programa foi interrompido!")
         break
